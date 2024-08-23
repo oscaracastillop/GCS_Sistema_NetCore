@@ -8,10 +8,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Gcs.DAL.DBContext;
 using Microsoft.EntityFrameworkCore;
 using Gcs.Entity;
-//using Gcs.BLL.Implementacion;
-//using Gcs.BLL.Interfaces;
+using Gcs.BLL.Implementacion;
+using Gcs.BLL.Interfaces;
 using Gcs.DAL.Implementacion;
 using Gcs.DAL.Interfaces;
+using Gcs.BLL.Interfaces;
 
 namespace Gcs.IOC
 {
@@ -27,6 +28,13 @@ namespace Gcs.IOC
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             services.AddScoped<IVentaRepository, VentaRepository>();
+
+            services.AddScoped<ICorreoService, CorreoService>();
+
+            services.AddScoped<IFireBaseService, FireBaseService>();
+
+            services.AddScoped<IUtilidadesService, UtilidadesService>();
+            services.AddScoped<IRolService, RolService>();
         }
     }
 }
