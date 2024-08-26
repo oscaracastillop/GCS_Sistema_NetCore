@@ -45,6 +45,7 @@ namespace Gcs.BLL.Implementacion
                 {
                     Host = Config["host"],
                     Port = int.Parse(Config["port"]),
+                    Credentials = credenciales,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     UseDefaultCredentials = false,
                     EnableSsl = true,
