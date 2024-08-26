@@ -1,4 +1,5 @@
 
+using Gcs.App.Utilidades.AutoMapper;
 using Gcs.IOC;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddControllersWithViews();
 
 
 builder.Services.InyectarDependencia(builder.Configuration);
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 var app = builder.Build();
 
