@@ -28,22 +28,7 @@
         <hr />
         <div class="row">
             <div class="col-sm-12">
-                <table class="table table-bordered" id="tbdata" cellspacing="0" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Foto</th>
-                            <th>Nombre</th>
-                            <th>Correo</th>
-                            <th>Telefono</th>
-                            <th>Rol</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+                <table class="table table-bordered" id="tbdata" cellspacing="0" style="width:100%"></table>
             </div>
         </div>
     </div>
@@ -133,5 +118,14 @@
     <script src="~/js/vistas/Usuario_Index.js"></script>
 
     <!-- SOLO ES DE EJEMPLO - IGNORAR -->
-    <script src="~/js/vistas/datatables-demo.js"></script>
+    @* <script src="~/js/vistas/datatables-demo.js"></script> *@
+
+    <script>
+        $(document).ready(function () {
+            grid();
+        });
+    </script>
+
+
+    <img style="height:60px"/> 
 }
